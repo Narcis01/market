@@ -1,0 +1,36 @@
+<div class="container border border-dark p-5">
+    <form [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
+
+        <div formGroupName="phone" class="form-area">
+            <h3>Phone</h3>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Name</label></div>
+                <div class="col-md-9">
+                    <input formControlName="name" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Description</label></div>
+                <div class="col-md-9">
+                    <input formControlName="description" type="text">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Price</label></div>
+                <div class="col-md-9">
+                    <input formControlName="price" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-info">Save</button>
+        </div>
+
+    </form>
+
+
+</div>

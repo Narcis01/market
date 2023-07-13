@@ -1,0 +1,61 @@
+<div class="container border border-dark p-5">
+
+    <div *ngFor="let tempPhone of phones">
+        <div class="row border border-dark p-2 m-2">
+            <a routerLink="/phone-info/{{tempPhone.id}}">
+                <img src="{{ tempPhone.imageUrl }}" alt="">
+            </a>
+            <div class="d-flex flex-column ">
+                <div class="p-2">{{ tempPhone.name }}</div>
+                <div class="p-2">{{ tempPhone.description }}</div>
+                <div class="p-2">{{ tempPhone.price | currency: 'USD' }}</div>
+            </div>
+
+            <div class="d-flex flex-column " style="margin-left: auto;">
+                <button class="btn btn-primary m-3" routerLink="/phone-info/{{tempPhone.id}}"
+                    style="margin-left: auto; height: 30%;">Buy</button>
+                <button class="btn btn-danger m-3" style="margin-left: auto; height: 30%;"
+                    (click)="deletePhone(tempPhone.id)">Delete post</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let tempCar of cars">
+        <div class="row border border-dark p-2 m-2">
+            <a routerLink="/car-info/{{tempCar.id}}">
+                <img src="{{ tempCar.imageUrl }}" alt="">
+            </a>
+            <div class="d-flex flex-column ">
+                <div class="p-2">{{ tempCar.name }}</div>
+                <div class="p-2">{{ tempCar.description }}</div>
+                <div class="p-2">{{ tempCar.price | currency: 'USD' }}</div>
+            </div>
+            <div class="d-flex flex-column " style="margin-left: auto;">
+                <button class="btn btn-primary m-3" routerLink="/car-info/{{tempCar.id}}"
+                    style="margin-left: auto; height: 30%;">Buy</button>
+                <button class="btn btn-danger m-3" style="margin-left: auto; height: 30%;"
+                    (click)="deleteCar(tempCar.id)">Delete post</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let tempApartment of apartments">
+        <div class="row border border-dark p-2 m-2">
+            <a routerLink="/apartment-info/{{tempApartment.id}}">
+                <img src="{{ tempApartment.imageUrl }}" alt="">
+            </a>
+            <div class="d-flex flex-column ">
+                <div class="p-2">{{ tempApartment.name }}</div>
+                <div class="p-2">{{ tempApartment.description }}</div>
+                <div class="p-2">{{ tempApartment.price | currency: 'USD' }}</div>
+            </div>
+            <div class="d-flex flex-column " style="margin-left: auto;">
+                <button class="btn btn-primary m-3" routerLink="/apartment-info/{{ tempApartment.id }}"
+                    style="margin-left: auto; height: 30%;">Buy</button>
+                <button class="btn btn-danger m-3" style="margin-left: auto; height: 30%;"
+                    (click)="deleteApartment(tempApartment.id)">Delete post</button>
+            </div>
+        </div>
+    </div>
+
+</div>

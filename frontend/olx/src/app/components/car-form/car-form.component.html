@@ -1,0 +1,41 @@
+<div class="container border border-dark p-5">
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+
+        <div formGroupName="car" class="form-area">
+            <h3>Car</h3>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Name</label></div>
+                <div class="col-md-9">
+                    <input formControlName="name" type="text" style="width: 30%;">
+                </div>
+            </div>
+
+            <div class="row" >
+                <div class="col-md-2" > <label>Description</label></div>
+                <div class="col-md-9" >
+                    <input formControlName="description" type="text" style="width: 30%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"> <label>Price</label></div>
+                <div class="col-md-9">
+                    <input formControlName="price" type="text" style="width: 30%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3" style="width: 40%;">
+            <input class="form-control form-control-sm" id="formFileSm" type="file" (change)="onFileSelected($event)">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-info">Save</button>
+        </div>
+
+
+    </form>
+
+
+</div>

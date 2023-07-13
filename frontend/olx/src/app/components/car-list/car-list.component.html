@@ -1,0 +1,62 @@
+<div class="container border border-dark p-5" *ngFor="let tempCar of cars">
+
+    <div class="row border border-dark p-2 m-2">
+        <a routerLink="/car-info/{{tempCar.id}}">
+            <img src="{{ tempCar.imageUrl }}" style="height: 100px; width: 100px;" alt="">
+        </a>
+        <div class="d-flex flex-column ">
+            <div class="p-2">{{ tempCar.name }}</div>
+            <div class="p-2">{{ tempCar.description }}</div>
+            <div class="p-2">{{ tempCar.price | currency: 'USD' }}</div>
+        </div>
+        <div class="d-flex flex-column " style="margin-left: auto;">
+            <button class="btn btn-primary m-3" routerLink="/car-info/{{tempCar.id}}"
+                style="margin-left: auto; height: 30%;">Buy</button>
+            <button class="btn btn-danger m-3" style="margin-left: auto; height: 30%;" (click)="deleteCar(tempCar.id)">Delete post</button>
+        </div>
+
+    </div>
+
+
+    <!--
+    <div class="row border border-dark p-2 m-2" >
+        <img src="assets/image/car/car.png" style="height: 100px; width: 100px;" alt="">
+        <div class="d-flex flex-column ">
+            <div class="p-2">Nume</div>
+            <div class="p-2">Descriere</div>
+            <div class="p-2">Pret</div>
+        </div>
+        <button class="btn btn-primary" routerLink="/car-info" style="margin-left: auto; height: 30%;" >Buy</button>
+
+    </div>
+    <div class="row border border-dark p-2 m-2" >
+        <p class="col-1">Image</p>
+        <div class="d-flex flex-column">
+            <div class="p-2">Nume</div>
+            <div class="p-2">Descriere</div>
+            <div class="p-2">Pret</div>
+        </div>
+        <div class="btn btn-primary" style="margin-left: auto; height: 30%;" >Buy</div>
+    </div>
+    <div class="row border border-dark p-2 m-2" >
+        <p class="col-1">Image</p>
+        <div class="d-flex flex-column">
+            <div class="p-2">Nume</div>
+            <div class="p-2">Descriere</div>
+            <div class="p-2">Pret</div>
+        </div>
+        <div class="btn btn-primary" style="margin-left: auto; height: 30%;" >Buy</div>
+
+    </div>
+    <div class="row border border-dark p-2 m-2" >
+        <p class="col-1">Image</p>
+        <div class="d-flex flex-column">
+            <div class="p-2">Nume</div>
+            <div class="p-2">Descriere</div>
+            <div class="p-2">Pret</div>
+        </div>
+        <div class="btn btn-primary" style="margin-left: auto; height: 30%;" >Buy</div>
+
+    </div>
+-->
+</div>
